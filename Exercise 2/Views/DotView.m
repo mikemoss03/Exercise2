@@ -19,9 +19,7 @@
     return self;
 }
 
-
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
+//Draw dots view
 - (void)drawRect:(CGRect)rect
 {
     NSInteger colorIndex = 0;
@@ -29,22 +27,29 @@
     
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     
+    //Loop through each row
     for (int i = 0; i < _rows.integerValue; i++) {
+        //Add a dot for each column
         for (int j = 0; j < _coloumns.integerValue; j++) {
             CGRect rect = CGRectMake(j * dotWidth, i * dotWidth, dotWidth, dotWidth);
+            
+            //Add dot
             CGContextAddEllipseInRect(ctx, rect);
             CGContextSetFillColorWithColor(ctx, ((UIColor *)[_colors objectAtIndex:colorIndex]).CGColor);
             CGContextFillPath(ctx);
             
+            //Stroke dot with white outline
             CGContextSetLineWidth(ctx, 1);
             CGContextSetStrokeColorWithColor(ctx, [UIColor whiteColor].CGColor);
             CGContextStrokeEllipseInRect(ctx, rect);
             
+            //move to the next color
             colorIndex = (colorIndex >= _colors.count - 1) ? 0 : colorIndex + 1;
         }
     }
 }
 
+//Return an UIImage from UIView
 -(UIImage *)imageRepresentation
 {
     UIGraphicsBeginImageContext(self.frame.size);
@@ -52,6 +57,7 @@
     return UIGraphicsGetImageFromCurrentImageContext();
 }
 
+//Remove all dots
 -(void)clearDots
 {
     _coloumns = 0;

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "27BFC80518A9DBA900C1CFCA"
-               BuildableName = "Excercise 2.app"
-               BlueprintName = "Excercise 2"
-               ReferencedContainer = "container:Excercise 2.xcodeproj">
+               BuildableName = "Exercise 2.app"
+               BlueprintName = "Exercise 2"
+               ReferencedContainer = "container:Exercise 2.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "27BFC82918A9DBA900C1CFCA"
-               BuildableName = "Excercise 2Tests.xctest"
-               BlueprintName = "Excercise 2Tests"
-               ReferencedContainer = "container:Excercise 2.xcodeproj">
+               BuildableName = "Exercise 2Tests.xctest"
+               BlueprintName = "Exercise 2Tests"
+               ReferencedContainer = "container:Exercise 2.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "27BFC80518A9DBA900C1CFCA"
-            BuildableName = "Excercise 2.app"
-            BlueprintName = "Excercise 2"
-            ReferencedContainer = "container:Excercise 2.xcodeproj">
+            BuildableName = "Exercise 2.app"
+            BlueprintName = "Exercise 2"
+            ReferencedContainer = "container:Exercise 2.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "27BFC80518A9DBA900C1CFCA"
-            BuildableName = "Excercise 2.app"
-            BlueprintName = "Excercise 2"
-            ReferencedContainer = "container:Excercise 2.xcodeproj">
+            BuildableName = "Exercise 2.app"
+            BlueprintName = "Exercise 2"
+            ReferencedContainer = "container:Exercise 2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "27BFC80518A9DBA900C1CFCA"
-            BuildableName = "Excercise 2.app"
-            BlueprintName = "Excercise 2"
-            ReferencedContainer = "container:Excercise 2.xcodeproj">
+            BuildableName = "Exercise 2.app"
+            BlueprintName = "Exercise 2"
+            ReferencedContainer = "container:Exercise 2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

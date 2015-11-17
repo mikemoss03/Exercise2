@@ -32,11 +32,13 @@
     [super didReceiveMemoryWarning];
 }
 
+//Hide keyboard on background touch
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self.view endEditing:YES];
 }
 
+//Number formatter used to check if UITextFields contain numeric values
 -(NSNumberFormatter *)nf
 {
     if(!_nf)
@@ -69,6 +71,7 @@
 
 -(IBAction)goTapped:(id)sender
 {
+    //Commit any edits in progress
     [self.view endEditing:YES];
     
     if([self readyToDraw])
@@ -91,6 +94,7 @@
     UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
 }
 
+//Make sure that no fields are left blank before drawing the dots
 -(BOOL)readyToDraw
 {
     BOOL ready = YES;
@@ -100,16 +104,24 @@
     return ready;
 }
 
+//support multiple orientations for the iPad
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [_dotsView setNeedsDisplay];
+}
+
 #pragma mark - Image Saving
 -(void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
 {
     UIAlertView *alertView;
     
+    //There was a problem saving the image
     if(error)
     {
         alertView = [[UIAlertView alloc] initWithTitle:@"Error Saving Image" message:@"There was an error saving the image. Please check your settings and try again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         
     }
+    //The image was saved to the camera roll
     else
     {
         alertView = [[UIAlertView alloc] initWithTitle:@"Image Saved" message:@"Image succesfully saved!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
